@@ -1,0 +1,38 @@
+<!--div id="disqus_thread" name="{{ site.disqus.shortname }}">
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink" target="_blank">Loading Disqus comments...</a>
+</div-->
+
+<!-- 多说评论框 start -->
+	<!-- <div class="ds-thread" data-thread-key="{{site.url}}}" data-title="site.url" data-url="site.url"></div> -->
+<!-- 多说评论框 end -->
+
+<script>
+function toggleDuoshuoComments(container){
+    var el = document.createElement('div');//该div不需要设置class="ds-thread"
+    el.setAttribute('data-thread-key', duoshuoKey);//必选参数
+    el.setAttribute('data-title', duoshuoTitle);//必选参数
+    el.setAttribute('data-url', duoshuoUrl);//可选参数
+    DUOSHUO.EmbedThread(el);
+    jQuery(container).append(el);
+}
+var isShow = false
+function showDuoshuo(){
+  if(isShow==false)
+  {
+    toggleDuoshuoComments('#comment-box');
+    isShow = true;
+  }
+}
+function LoadDuoshuo(){
+    setTimeout('showDuoshuo()',500);
+}
+</script>
+<!-- <a href="javascript:void(0);" onclick="showDuoshuo();">展开评论</a> -->
+<div id="comment-box" ></div>
+<script>
+LoadDuoshuo();
+</script>
+<!-- <script>
+toggleDuoshuoComments('#comment-box');
+</script> -->

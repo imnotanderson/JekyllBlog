@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"holyhigh"};
+    (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+    <!--myduoshuo start-->
+    <script>var duoshuoQuery = {short_name:"holyhigh"};</script>
+    <script src="http://static.duoshuo.com/embed.js"></script>
+    <!--myduoshuo end-->
+    {% include header.html %}
+  </head>
+  <body>
+    {% include nav.html %}
+    <div id="post">
+      <div id="pjax">
+        {{ content }}
+        {% include copyright.html %}
+      </div> <!-- end #pjax -->
+
+      <div id="post__toc-trigger">
+        <div id="post__toc">
+          <span id="post__toc-title">Table of Contents</span>
+          <ul id="post__toc-ul"></ul>
+        </div>
+      </div>
+    </div> <!-- end #post -->
+
+    {% include footer.html %}
+    {% include googleanalytics.html %}
+  </body>
+</html>
